@@ -1,0 +1,13 @@
+name = "quizz-api"
+main = "src/index.ts"
+compatibility_date = "2022-12-05"
+
+[[ d1_databases ]]
+binding = ""
+database_name = ""
+database_id = ""
+preview_database_id = ""
+
+[vars]
+LIVEPEER_SECRET_KEY = ""
+JWT_SECRET_KEY = ""

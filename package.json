@@ -1,0 +1,22 @@
+{
+  "name": "quizz-api",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20221111.1",
+    "ethers": "^5.7.2",
+    "joi": "^17.7.0",
+    "model-one": "^0.0.7",
+    "typescript": "^4.9.3",
+    "wrangler": "d1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish",
+    "db:build:production": "npx wrangler@d1 d1 execute quizz-api-db --file=./src/database/schema.sql ",
+    "db:build:local": "cat ./src/database/schema.sql | sqlite3 ./db/d1/DB.sqlite3"
+  },
+  "dependencies": {
+    "itty-router": "^2.6.6"
+  }
+}
